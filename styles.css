@@ -10,6 +10,15 @@ header {
     margin: 20px 0;
 }
 
+#side-panel {
+    position: sticky;
+    top: 20px; /* Distance from the top of the viewport */
+    padding: 20px;
+    background-color: #f7f7f7; /* Background color */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
 .navbar {
     display: flex;
     justify-content: center; /* Center the nav links */
