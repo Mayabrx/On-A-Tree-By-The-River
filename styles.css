@@ -10,7 +10,7 @@ header {
     margin: 20px 0;
 }
 
-#side-panel {
+.side-panel {
     position: sticky;
     top: 20px; /* Distance from the top of the viewport */
     padding: 20px;
