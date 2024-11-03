@@ -22,13 +22,91 @@
     <a href="info.html">Info</a>
 </nav>
 
-<!-- Clues Content -->
-<section id="clues">
-    <h2>Mainpage</h2>
-    <p>Description: This is a nonsensical description for the clues section.</p>
-    <img src="image_placeholder.jpg" alt="Placeholder Image">
-    <!-- Additional subsections can go here -->
-</section>
+<!-- Main Content Area -->
+<div class="content-container">
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <h2>Mainpage</h2>
+        <p>Description of New Red Dress:</p>
+        
+        <!-- Slideshow for New Red Dress -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image_placeholder_1.jpg" style="width:100%" alt="New Red Dress Image 1">
+                <div class="text">Description of image 1</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image_placeholder_2.jpg" style="width:100%" alt="New Red Dress Image 2">
+                <div class="text">Description of image 2</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image_placeholder_3.jpg" style="width:100%" alt="New Red Dress Image 3">
+                <div class="text">Description of image 3</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <h2>Description of Three Gang:</h2>
+        
+        <!-- Slideshow for Three Gang -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image_placeholder_4.jpg" style="width:100%" alt="Three Gang Image 1">
+                <div class="text">Description of image 1</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image_placeholder_5.jpg" style="width:100%" alt="Three Gang Image 2">
+                <div class="text">Description of image 2</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image_placeholder_6.jpg" style="width:100%" alt="Three Gang Image 3">
+                <div class="text">Description of image 3</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </section>
+
+</div>
+
+<script>
+// Slideshow functionality
+let slideIndex1 = 1;
+showSlides(slideIndex1, 'slideshow-container', 'mySlides');
+
+function plusSlides(n) {
+    showSlides(slideIndex1 += n, 'slideshow-container', 'mySlides');
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex1 = n, 'slideshow-container', 'mySlides');
+}
+
+function showSlides(n, containerClass, slideClass) {
+    let i;
+    let slides = document.getElementsByClassName(slideClass);
+    if (n > slides.length) {slideIndex1 = 1}
+    if (n < 1) {slideIndex1 = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex1-1].style.display = "block";  
+}
+</script>
 
 </body>
 </html>
