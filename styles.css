@@ -1,50 +1,56 @@
-.content-container {
-    display: flex; /* Use flexbox for layout */
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Set a maximum width for the slideshow */
+    margin: auto; /* Center the slideshow */
 }
 
-.section-manager {
-    width: 200px; /* Fixed width for the sidebar */
-    padding: 20px;
-    background-color: #e0f7fa; /* Same light cyan as the navbar */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Space between sidebar and main content */
+.mySlides {
+    display: none; /* Hide all slides by default */
 }
 
-.section-manager h2 {
-    text-align: center; /* Center title */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-.section-manager ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.section-manager li {
-    margin: 10px 0; /* Space between list items */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background on hover */
 }
 
-.section-manager a {
-    text-decoration: none; /* Remove underline */
-    color: #00796b; /* Dark teal text */
-    padding: 5px;
-    display: block; /* Make the link block-level for easier clicking */
-    transition: background-color 0.3s; /* Smooth transition */
+.text {
+    color: #f2f2f2; /* Text color for image descriptions */
+    font-size: 15px; /* Font size for descriptions */
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
-.section-manager a:hover {
-    background-color: #b2dfdb; /* Lighten background on hover */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb; /* Light grey */
+    border-radius: 50%; /* Circular dots */
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.main-content {
-    flex-grow: 1; /* Allow main content to take up remaining space */
-}
-
-.main-content img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-
-section {
-    margin-bottom: 20px; /* Space between sections */
+.active, .dot:hover {
+    background-color: #717171; /* Dark grey when active or hovered */
 }
